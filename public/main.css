@@ -1,8 +1,37 @@
+a {
+	text-decoration: none;
+	color: #2E2E2E;
+}
+
+/*a:visited {
+	color: #2E2E2E;
+}*/
+
 body {
 	background-color: #DCDFE3;
 
 }
 
+.buttons {
+    background-color: #B5B5B5;
+    height: 35px;
+    width: 200px;
+    color: #2E2E2E;
+    text-align: center;
+    line-height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-family: sans-serif;
+     transition: background-color 1s ease-out;
+    
+}
+
+.buttons:hover {
+		background-color: #E3BFC9;
+	  transition: background 1s ease-in;
+
+}
 
 #topbar {
     height: 100px;
@@ -19,4 +48,5 @@ h1 {
     font-family: Helvetica;
     color: #2E2E2E;
 }
+
 
