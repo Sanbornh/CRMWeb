@@ -1,0 +1,22 @@
+body {
+	background-color: #DCDFE3;
+
+}
+
+
+#topbar {
+    height: 100px;
+    background-color: #3F85E8;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    border-bottom: 5px solid #B5B5B5;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 25px;
+    font-family: Helvetica;
+    color: #2E2E2E;
+}
+
