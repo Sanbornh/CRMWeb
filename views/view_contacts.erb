@@ -14,7 +14,7 @@
         </div>
 
 				<ul>
-				<% @@contacts.each do |contact| %>
+				<% @@database.contacts.each do |contact| %>
 				  <li><%= contact.first_name %> <%= contact.last_name %> <%= contact.email %></li>
 				<% end %>
 				</ul>

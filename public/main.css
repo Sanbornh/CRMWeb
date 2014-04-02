@@ -23,13 +23,13 @@ body {
     margin-right: auto;
     margin-top: 10px;
     font-family: sans-serif;
-     transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
     
 }
 
 .buttons:hover {
-		background-color: #E3BFC9;
-	  transition: background 1s ease-in;
+    background-color: #E3BFC9;
+    transition: background 1s ease-in;
 
 }
 
@@ -51,16 +51,46 @@ h1 {
 
 li {
 
-	 font-family: Helvetica;
-   color: #2E2E2E;
-   list-style: none;
-   margin-left: auto;
-   margin-right: auto;
+    font-family: Helvetica;
+    color: #2E2E2E;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
+form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.textfield {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: none;
+    height: 35px;
+    width: 394px;
+    color: #DCDFE3;
+    font-size: 25px;
+    padding-left: 6px;
+    
+}
+
+.textfield:active {
+    color: green;
+    border: none;
+    
+}
 
 
+.textfield:hover {
+    color: green;
+    border: none;
+}
 
 
 

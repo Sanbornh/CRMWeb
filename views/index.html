@@ -13,9 +13,12 @@
             <h1>Welcome to CRM</h1>
         </div>
 
-        <div class="buttons">ADD NEW CONTACT</div>
-        <div class="buttons">DISPLAY CONTACTS</div>
-        <div class="buttons">MODIFY CONTACT</div></div>
+        <form action="/contacts" method="post">
+            <input class="textfield" type="text" name="first_name" value="First Name">
+            <input class="textfield" type="text" name="last_name" value="Last Name">
+            <input class="textfield" type="text" name="email" value="Email">
         
+            <input type="submit" name="Submit">
+        </form>
     </body>
 </html>
