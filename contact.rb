@@ -34,4 +34,11 @@ class Contact
 	def get_id
 		Contact.get_id
 	end
+
+	def display
+		puts @first_name
+		puts @last_name
+		puts @email
+		puts @notes
+	end
 end

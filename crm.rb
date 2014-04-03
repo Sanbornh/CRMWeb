@@ -23,5 +23,6 @@ end
 post '/contacts' do
 	new_contact = Contact.new(params["first_name"], params["last_name"], params["email"], params["note"])
 	@@database.add_to_database(new_contact)
+	binding.pry
 	redirect to('/contacts/view')
 end

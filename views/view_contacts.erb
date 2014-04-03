@@ -1,1 +1,3 @@
-<h1>WELCOME TO CRM</h1>
+<% @@database.each do |contact| %>
+	<%= contact.display %>
+<% end %>
