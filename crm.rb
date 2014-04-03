@@ -17,5 +17,11 @@ get '/contacts/view' do
 end
 
 get '/contacts/modify' do 
-	erb :modify_contacts
+	erb :modify_contacts	
+end
+
+post '/contacts' do
+	new_contact = Contact.new(params["first_name"], params["last_name"], params["email"], params["note"])
+	@@database.add_to_database(new_contact)
+	redirect to('/contacts/view')
 end
