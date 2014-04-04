@@ -109,6 +109,11 @@ h2 {
     margin-left: 68%;
 }
 
+.addsubmit:hover {
+    background-color: #1D2326;
+    color: #DDDCC5;
+}
+
 .deletesubmit {
     position: absolute;
     margin-top: 38px;
