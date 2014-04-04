@@ -1,6 +1,4 @@
 require 'sinatra'
-# require './contact'
-require './database'
 require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
@@ -11,16 +9,11 @@ class Contact
 		property :first_name, String
 		property :last_name, String
 		property :email, String
-		property :notes, String 
+		property :notes, Text
 end
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
-
-
-# @@database = Database.new
-# @@database.add_to_database(Contact.new("Sanborn", "Hilland", "sanbornh@rogers.com", "note note note"))
-# @@database.add_to_database(Contact.new("Tim", "ber", "tim@gmail.com", "note note note"))
 
 
 get '/' do 
@@ -41,6 +34,7 @@ get '/contacts/modify' do
 end
 
 post '/contacts' do
+	binding.pry
 	contact = Contact.create(
 		:first_name => params[:first_name],
 		:last_name => params[:last_name],
@@ -61,7 +55,7 @@ get '/contacts/:id' do
 end
 
 get '/contacts/:id/edit' do
-	@contact = @@database.find_by(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		erb :edit_contact
 	else
@@ -70,12 +64,15 @@ get '/contacts/:id/edit' do
 end
 
 put "/contacts/:id" do
-  @contact = @@database.find_by(params[:id].to_i)	
+  @contact = Contact.get(params[:id].to_i)	
   if @contact then
-    @contact.first_name = params[:first_name]
-    @contact.last_name = params[:last_name]
-    @contact.email = params[:email]
-    @contact.notes = params[:note]
+  	@contact.update(
+  		:first_name => params[:first_name],
+			:last_name => params[:last_name],
+			:email => params[:email],
+			:notes => params[:notes]
+
+  	)
     redirect to("/contacts/view")
   else
     raise Sinatra::NotFound
@@ -83,10 +80,9 @@ put "/contacts/:id" do
 end
 
 delete "/contacts/:id" do
-  @contact = @@database.find_by(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
     @@database.remove(@contact)
-    # binding.pry
     redirect to("/contacts/view")
   else
     raise Sinatra::NotFound

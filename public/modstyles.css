@@ -135,11 +135,13 @@ h2 {
 .addsubmit {
     margin-top: 5%;
     margin-left: 68%;
+    cursor: pointer;
 }
 
 .addsubmit:hover {
     background-color: #1D2326;
     color: #DDDCC5;
+    cursor: pointer;
 }
 
 .deletesubmit {
@@ -148,11 +150,13 @@ h2 {
     margin-left: 261px;
     background-color: #DDDCC5;
     color: #958976;
+    cursor: pointer;
 }
 
 .deletesubmit:hover {
     background-color: #958976;
     color: #1D2326;
+    cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
