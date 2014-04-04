@@ -1,0 +1,40 @@
+@-moz-keyframes slidein {
+  from {
+    margin-top: 0px;
+  }
+
+  to {
+    margin-top: -5px;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-top: 0px;
+  }
+
+  to {
+    margin-top: -5px;
+  }
+}
+
+@-moz-keyframes slideout {
+  from {
+    margin-top: -5px;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes slideout {
+  from {
+    margin-top: -5px;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
+

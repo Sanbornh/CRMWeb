@@ -1,0 +1,34 @@
+.container {
+   min-height:100%;
+   position:relative;
+}
+
+.header {
+   padding:10px;
+}
+
+.body {
+   padding:10px;
+   padding-bottom:30px;   /* Height of the footer */
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 30px;   /* Height of the footer */
+    background:#1D2326;
+    border-top: 2px solid #DDDCC5;
+
+}
+
+.mainbox {
+    position: relative;
+    top: 5em;
+    margin: auto;
+    height: 450px;
+    width: 350px;
+    background-color: rgba(97, 20, 39, 0.6);
+    border-radius: 10px;
+    border: 2px solid #DDDCC5;    
+}
