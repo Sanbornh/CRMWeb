@@ -1,6 +1,6 @@
 /*BACKGROUND SETTINGS*/
 html {
-    background: url(black_and_white_mountains_stars_lakes_skyscapes_1440x900_19752.jpg) no-repeat center center fixed; 
+    background: url(MOUNTAINS-4-of-11.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,19 +9,21 @@ html {
 }
 
 /*GENERAL*/
-h1 {
+h1, h2, p {
     color:#DDDCC5;
+}
+
+h1 {
+    
     margin-top: 94%;
     margin-left: 3%;    
 }
 
 h2 {
-    color:#DDDCC5;
     text-align: center;
     line-height: 2;
-    margin-top: 5%;
+    margin-top: 6%;
 }
-
 
 
 
@@ -105,4 +107,56 @@ h2 {
 .addsubmit {
     margin-top: 5%;
     margin-left: 68%;
+}
+
+.deletesubmit {
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 261px;
+    background-color: #DDDCC5;
+    color: #958976;
+}
+
+.deletesubmit:hover {
+    background-color: #958976;
+    color: #1D2326;
+}
+
+::-webkit-input-placeholder {
+   color: #1D2326;
+}
+
+/*DISPLAY SETTINGS*/
+
+.contactname {
+    text-align: left;
+    padding-left: 28px;
+    color: #1D2326
+}
+
+.contactdisplay {   
+    margin-left: 20px;
+    height: 20px;
+    line-height: 1.5;
+    
+}
+
+.tablebuffer {
+    height: 12px;   
+}
+
+.contactheading {
+    border-right: 2px solid #DDDCC5;
+    width: 60px;
+    text-align: center;
+}
+
+.contactattribute {
+    padding-left: 10px;
+    width:240px;
+    color: #1D2326;
+}
+
+.notecell {
+    height: 250px   
 }
