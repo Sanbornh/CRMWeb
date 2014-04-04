@@ -1,9 +1,20 @@
-<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
-<p><strong>Email:</strong> <%= @contact.email %></p>
-<p><strong>Note:</strong></p>
-<p><%= @contact.notes %></p>
+<h2 class="contactname"><%= @contact.first_name %> <%= @contact.last_name %></h2>
+<table class="contactdisplay">
+	<tr>
+		<td class="contactheading"><p>Email</p></td>        
+		<td class="contactattribute"><p><%= @contact.email %></p></td>
+	</tr>
+	<tr class="tablebuffer"></tr>
+	<tr>
+		<td class="contactheading"><p>Notes</p></td>
+		<td class="contactattribute notecell"><div><p><%= @contact.notes %></p></div></td>
+	</tr>
+</table>
+
+
 
 <form action="/contacts/<%= @contact.id %>" method="POST">
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" name="Delete Contact" value="delete">
+  <input class="formbutton deletesubmit" type="submit" name="Delete Contact" value="DELETE">
 </form>
+

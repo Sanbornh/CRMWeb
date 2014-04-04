@@ -2,29 +2,39 @@
 <html>
      <head>
         <title>Awesome CRM</title>
-        <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+            <link rel="stylesheet" type="text/css" href="../../reset.css">
+            <link rel="stylesheet" type="text/css" href="../../basestyles.css">       
+            <link rel="stylesheet" type="text/css" href="../../layoutstyles.css">
+            <link rel="stylesheet" type="text/css" href="../../modstyles.css">
+            <link rel="stylesheet" type="text/css" href="../../animations.css">
         <meta name="author" content="Sanborn Hilland">
-        <meta name="description" content="CRM">
+        <meta name="description" content="Template">
     </head>
     
     <body>
-        <div id="container">
-           <div id="header"></div>
-           <div id="body">
-            <div id="mainbox">
-                <%= yield %>
+        <div class="container">
+            <div class="header"></div>
+            <div class="body">
+            <!--    # <div class="logo">
+                #     <div class="type">
+                #        CRM 
+                #     </div>
+                # </div> -->
+            <div class="mainbox">
+               <%= yield %>
             </div>
             </div>
-           <div id="footer">
-            <ul>
-                <a href="/contacts/new"><li>ADD</li></a>    
-                <a href="/contacts/modify"><li>MODIFY</li></a>
-                <a href="/contacts/view"><li>DISPLAY</li></a>
+            <div class="footer">
+            <ul class="navbar">
+                <a href="/contacts/new"><li class="navbuttons">ADD</li></a>   
+                <a href="/contacts/modify"><li class="navbuttons">MODIFY</li></a>
+                <a href="/contacts/view"><li class="navbuttons">DISPLAY</li></a>
             </ul> 
-                <div id="bottombar"></div>
+                <div class="bottombar"></div>
             </div>
         </div>
    </body>
 </html>
+
 
 

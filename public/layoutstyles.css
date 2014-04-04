@@ -32,3 +32,21 @@
     border-radius: 10px;
     border: 2px solid #DDDCC5;    
 }
+
+.bodydiv {
+    display: inline-block;
+}
+
+.alpha {
+    width: 24%;   
+    position: relative;
+    top: -243px;
+}
+
+.beta {
+    width: 50%;   
+}
+
+.charlie {
+    width: 24%;   
+}

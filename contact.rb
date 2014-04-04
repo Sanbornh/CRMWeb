@@ -1,19 +1,13 @@
 class Contact
 
-	# binding.pry
-	# log = File.new("./log.txt")
-	# yaml = log.read
-	# log = YAML.load(yaml)
-	# binding.pry
-	@@contact_id = 0  #log[:id]
-	attr_reader :first_name, :last_name, :email, :notes
+	@@contact_id = 999
+	attr_accessor :first_name, :last_name, :email, :notes, :id
 
 	def initialize(first_name, last_name, email, note)	
 		@notes = Array.new(1, note)
 		@first_name = first_name
 		@last_name = last_name
 		@email = email
-
 		@@contact_id += 1
 		@id = @@contact_id
 	end

@@ -25,6 +25,34 @@ h2 {
     margin-top: 6%;
 }
 
+/*LOGO*/
+
+
+
+.circle {
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+    background-color: #1D2326;
+    border: 2px solid #DDDCC5;
+    position: relative;
+    margin-left: 50%;
+
+}
+
+.type {
+    display: block;
+    margin-top: 21px;
+    margin-left: 3px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #DDDCC5;
+    height: 30px;
+    width: 65px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #DDDCC5;
+}
+
 
 
 /*MAIN NAV SETTINGS*/
@@ -165,3 +193,5 @@ h2 {
 .notecell {
     height: 250px   
 }
+
+
