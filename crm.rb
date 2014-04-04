@@ -18,9 +18,9 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 
-@@database = Database.new
-@@database.add_to_database(Contact.new("Sanborn", "Hilland", "sanbornh@rogers.com", "note note note"))
-@@database.add_to_database(Contact.new("Tim", "ber", "tim@gmail.com", "note note note"))
+# @@database = Database.new
+# @@database.add_to_database(Contact.new("Sanborn", "Hilland", "sanbornh@rogers.com", "note note note"))
+# @@database.add_to_database(Contact.new("Tim", "ber", "tim@gmail.com", "note note note"))
 
 
 get '/' do 
@@ -32,6 +32,7 @@ get '/contacts/new' do
 end
 
 get '/contacts/view' do
+	@contacts = Contact.all
 	erb :view_contacts
 end
 
@@ -41,16 +42,17 @@ end
 
 post '/contacts' do
 	contact = Contact.create(
-		:first_name => params[:first_name]
-		:last_name => params[:last_name]
-		:email => params[:email]
+		:first_name => params[:first_name],
+		:last_name => params[:last_name],
+		:email => params[:email],
 		:notes => params[:notes]
 		)
+
 	redirect to('/contacts/view')
 end
 
 get '/contacts/:id' do 
-	@contact = @@database.find_by(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		erb :show_contact
 	else
