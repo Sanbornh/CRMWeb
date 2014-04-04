@@ -17,39 +17,6 @@ end
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-# 	def initialize(first_name, last_name, email, note)	
-# 		@notes = Array.new(1, note)
-# 		@first_name = first_name
-# 		@last_name = last_name
-# 		@email = email
-# 		@@contact_id += 1
-# 		@id = @@contact_id
-# 	end
-
-# 	def set_name
-# 		@first_name = name[0]
-# 		@last_name = name[1]
-# 	end
-
-# 	def new_note
-# 		@notes << gets.chomp
-# 	end
-
-# 	def self.get_id
-# 		@@contact_id
-# 	end
-
-# 	def get_id
-# 		Contact.get_id
-# 	end
-
-# 	def display
-# 		puts @first_name
-# 		puts @last_name
-# 		puts @email
-# 		puts @notes
-# 	end
-# end
 
 @@database = Database.new
 @@database.add_to_database(Contact.new("Sanborn", "Hilland", "sanbornh@rogers.com", "note note note"))
@@ -59,8 +26,6 @@ DataMapper.auto_upgrade!
 get '/' do 
 	erb :index
 end
-
-
 
 get '/contacts/new' do 
 	erb :new_contact
@@ -75,8 +40,12 @@ get '/contacts/modify' do
 end
 
 post '/contacts' do
-	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:notes])
-	@@database.add_to_database(new_contact)
+	contact = Contact.create(
+		:first_name => params[:first_name]
+		:last_name => params[:last_name]
+		:email => params[:email]
+		:notes => params[:notes]
+		)
 	redirect to('/contacts/view')
 end
 
