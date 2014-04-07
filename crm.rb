@@ -31,10 +31,10 @@ end
 
 get '/contacts/modify' do 
 	erb :modify_contacts	
-end
+end	
 
 post '/contacts' do
-	binding.pry
+# 	binding.pry
 	contact = Contact.create(
 		:first_name => params[:first_name],
 		:last_name => params[:last_name],
@@ -82,7 +82,7 @@ end
 delete "/contacts/:id" do
   @contact = Contact.get(params[:id].to_i)
   if @contact
-    @@database.remove(@contact)
+    @contact.destroy
     redirect to("/contacts/view")
   else
     raise Sinatra::NotFound

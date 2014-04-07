@@ -36,7 +36,8 @@ h2 {
     background-color: #1D2326;
     border: 2px solid #DDDCC5;
     position: relative;
-    margin-left: 50%;
+    z-index: 1;
+ 
 
 }
 
@@ -146,8 +147,8 @@ h2 {
 
 .deletesubmit {
     position: absolute;
-    margin-top: 38px;
-    margin-left: 261px;
+    margin-top: 17px;
+    margin-left: 267px;
     background-color: #DDDCC5;
     color: #958976;
     cursor: pointer;
@@ -198,4 +199,6 @@ h2 {
     height: 250px   
 }
 
-
+body > div > div.body > div > table > tbody > tr:nth-child(1) > td.contactheading {
+padding-left: 23px;
+}

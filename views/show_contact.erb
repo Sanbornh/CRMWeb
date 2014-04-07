@@ -1,6 +1,10 @@
 <h2 class="contactname"><%= @contact.first_name %> <%= @contact.last_name %></h2>
 <table class="contactdisplay">
 	<tr>
+		<td class="contactheading"><p>ID</p></td>        
+		<td class="contactattribute"><p><%= @contact.id %></p></td>
+	</tr>
+	<tr>
 		<td class="contactheading"><p>Email</p></td>        
 		<td class="contactattribute"><p><%= @contact.email %></p></td>
 	</tr>
