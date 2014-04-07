@@ -202,3 +202,49 @@ h2 {
 body > div > div.body > div > table > tbody > tr:nth-child(1) > td.contactheading {
 padding-left: 23px;
 }
+
+.contactlist {
+    width: 300px;
+    overflow: scroll;
+    margin: auto;
+    margin-top: 20px;
+    max-height: 404px;
+}
+
+li>a {
+    color: #DDDCC5;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
