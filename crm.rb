@@ -26,6 +26,7 @@ end
 
 get '/contacts/view' do
 	@contacts = Contact.all
+	@contacts.sort! { |a,b| a.first_name <=> b.first_name}
 	erb :view_contacts
 end
 
@@ -34,7 +35,6 @@ get '/contacts/modify' do
 end	
 
 post '/contacts' do
-# 	binding.pry
 	contact = Contact.create(
 		:first_name => params[:first_name],
 		:last_name => params[:last_name],
